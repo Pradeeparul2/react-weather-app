@@ -12,7 +12,7 @@ function InputFrom({ setCityDetails, setWeatherData }) {
 
   const getWeatherData = () => {
     axios
-      .get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=45b01a7f6a9893cc9370a6fd91f105fb&units=metric`)
+      .get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=45b01a7f6a9893cc9370a6fd91f105fb&units=metric`)
       .then((response) => {
         setCityDetails(response.data.city);
         setWeatherData(response.data.list);
